@@ -120,6 +120,8 @@ OverviewPage {
 
 
 	property VBusItem gridStrategyItem: VBusItem { bind: "com.victronenergy.amber/Strategy" }
+	property string gridStrategy: gridStrategyItem.value
+		
 	property VBusItem importPriceItem: VBusItem { bind: "com.victronenergy.amber/ImportPrice" }
 	property VBusItem exportPriceDisplayItem: VBusItem { bind: "com.victronenergy.amber/ExportPriceDisplay" }
 
