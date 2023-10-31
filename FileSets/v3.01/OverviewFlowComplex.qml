@@ -1518,7 +1518,7 @@ OverviewPage {
     }
     TileText
     {
-        text: -Utils.sign (importPrice.value)
+        text: -Utils.sign (importPrice)
         color: "black"
         anchors.fill: amberBox
         wrapMode: Text.WordWrap
