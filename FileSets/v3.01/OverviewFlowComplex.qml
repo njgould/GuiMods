@@ -380,7 +380,7 @@ OverviewPage {
 	            visible: true
 			}
 			TileText {
-				y:4
+				y:10
 				text: qsTr ("Export:") + EnhFmt.formatVBusItem (exportPriceItem, "c/kWh")
 				font.pixelSize: 14
 	            visible: true
