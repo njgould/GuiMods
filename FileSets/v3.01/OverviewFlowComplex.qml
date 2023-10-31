@@ -367,7 +367,7 @@ OverviewPage {
 ////// GuiMods — DarkMode
 		titleColor: !darkMode ? "#F4B350" : "#7A5928"
 		color: !darkMode ? "#F39C12" : "#794E09"
-		title: qsTr("Amber Price")
+		title: qsTr("Spot Price")
 		width: 145
 		height: 100
 		visible: true
@@ -375,13 +375,13 @@ OverviewPage {
 		values:
 			TileText{
 				y:8
-				text:  qsTr ("Import:") + EnhFmt.formatVBusItem (importPriceItem, "c/kWh")
+				text:  qsTr ("Import ") + EnhFmt.formatVBusItem (importPriceItem, "c/kWh")
 				font.pixelSize: 14
 	            visible: true
 			}
 			TileText {
 				y:50
-				text: qsTr ("Export:") + EnhFmt.formatVBusItem (exportPriceItem, "c/kWh")
+				text: qsTr ("Export ") + EnhFmt.formatVBusItem (exportPriceItem, "c/kWh")
 				font.pixelSize: 14
 	            visible: true
 			}
@@ -394,7 +394,7 @@ OverviewPage {
 			TileText {
 				y:80
 				text: gridStrategy
-				font.pixelSize: 9
+				font.pixelSize: 8
 	            visible: true
 			}				
 		anchors {
