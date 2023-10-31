@@ -376,12 +376,13 @@ OverviewPage {
 			TileText{
 				y:8
 				text:  qsTr ("Import:") + EnhFmt.formatVBusItem (importPriceItem, "c/kWh")
-				font.pixelSize: 17
+				font.pixelSize: 15
 	            visible: true
 			}
 			TileText {
-				text: EnhFmt.formatVBusItem (exportPriceItem, "c/kWh")
-				font.pixelSize: 17
+				y:14
+				text: qsTr ("Export:") + EnhFmt.formatVBusItem (exportPriceItem, "c/kWh")
+				font.pixelSize: 15
 	            visible: true
 			}
             // // spacer
