@@ -348,6 +348,31 @@ OverviewPage {
 
 
 
+// 	OverviewBox
+// 	{
+// 		id: amberPricing
+// ////// GuiMods — DarkMode
+// 		titleColor: !darkMode ? "#F4B350" : "#7A5928"
+// 		color: !darkMode ? "#F39C12" : "#794E09"
+// 		title: qsTr("Amber Price")
+// 		width: inOutTileWidth
+// 		height: inOutTileHeight
+// 		visible: 1
+//         opacity: 1
+// 		values: TileText {
+// 			y: 11
+// 			// text: EnhFmt.formatVBusItem (sys.pvOnGrid.power)
+// 			text:"5c/pkw"
+// 			font.pixelSize: 17
+//             visible: 1
+// 		}
+// 		anchors {
+// 			top: acOutputBox.bottom
+// 			topMargin: 5
+// 			left: acOutputBox.left
+// 		}
+// 		DetailTarget { id: pvOnInputTarget; detailsPage: "DetailPvInverter.qml" }
+// 	}
 
 
 
@@ -1481,8 +1506,9 @@ OverviewPage {
         opacity: 0.7
         anchors
         {
-			verticalCenter: dcLaneTop.verticalCenter
-            horizontalCenter: root.horizontalCenter
+			top: acOutputBox.bottom
+			topMargin: 5
+			left: acOutputBox.left
         }
         visible: true
     }
