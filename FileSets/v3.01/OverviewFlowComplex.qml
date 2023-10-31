@@ -374,8 +374,8 @@ OverviewPage {
         opacity: 1
 		values:
 			TileText{
-				y:13
-				text: EnhFmt.formatVBusItem (importPriceItem, "c/kWh")
+				y:8
+				text:  qsTr ("Import:") + EnhFmt.formatVBusItem (importPriceItem, "c/kWh")
 				font.pixelSize: 17
 	            visible: true
 			}
