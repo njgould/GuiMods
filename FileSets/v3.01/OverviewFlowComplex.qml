@@ -1514,7 +1514,7 @@ OverviewPage {
     }
     TileText
     {
-        text: EnhFmt.formatVBusItem (sys.battery.power)
+        text: EnhFmt.formatVBusItem (importPrice)
         color: "black"
         anchors.fill: amberBox
         wrapMode: Text.WordWrap
