@@ -121,7 +121,7 @@ OverviewPage {
 
 	property VBusItem gridStrategyItem: VBusItem { bind: "com.victronenergy.amber/Strategy" }
 	property VBusItem importPriceItem: VBusItem { bind: "com.victronenergy.amber/ImportPrice" }
-	property VBusItem exportPriceItem: VBusItem { bind: "com.victronenergy.amber/ExportPrice" }
+	property VBusItem exportPriceDisplayItem: VBusItem { bind: "com.victronenergy.amber/ExportPriceDisplay" }
 
 
     function getTimeFormat ()
@@ -368,8 +368,7 @@ OverviewPage {
 			}
 			TileText {
 				y:50
-				// text: qsTr ("Export ") + EnhFmt.formatVBusItem (exportPriceItem, "c/kWh")
-				text: qsTr ("Export ") + - Utils.sign(exportPriceItem.value)
+				text: qsTr ("Export ") + EnhFmt.formatVBusItem (exportPriceDisplayItem, "c/kWh")
 				font.pixelSize: 14
 	            visible: true
 			}
