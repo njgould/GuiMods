@@ -371,7 +371,7 @@ OverviewPage {
         opacity: 1
 		values:
 			TileText{
-				y: 14
+				y: 4
 				text: importPrice
 				font.pixelSize: 17
 	            visible: true
@@ -383,9 +383,9 @@ OverviewPage {
 	            visible: true
 			}
 			TileText {
-				y: 30
+				y: 20
 				text: gridStrategy
-				font.pixelSize: 10
+				font.pixelSize: 8
 	            visible: true
 			}				
 		anchors {
