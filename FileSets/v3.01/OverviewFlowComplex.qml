@@ -119,7 +119,7 @@ OverviewPage {
     property bool showBatteryTemp: showBatteryTempItem.valid && showBatteryTempItem.value == 1
 
 
-	property string victronAmberPrefix: "com.victronenergy.amber"
+	// property string victronAmberPrefix: "com.victronenergy.amber"
     // VBusItem { id: importPrice; bind: Utils.path(VictronAmberPrefix, "/ImportPrice") }
     // VBusItem { id: exportPrice; bind: Utils.path(VictronAmberPrefix, "/ExportPrice") }
     // VBusItem { id: gridStrategy; bind: Utils.path(VictronAmberPrefix, "/Strategy") }
@@ -369,9 +369,16 @@ OverviewPage {
 		height: 100
 		visible: true
         opacity: 1
-		values: TileText {
+		values:
+		TileText {
 			y: 11
 			text: EnhFmt.formatVBusItem (sys.pvOnGrid.power)
+			font.pixelSize: 17
+            visible: true
+		}
+		TileText {
+			y: 20
+			text: importPrice
 			font.pixelSize: 17
             visible: true
 		}
