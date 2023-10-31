@@ -1514,7 +1514,7 @@ OverviewPage {
     }
     TileText
     {
-        text: EnhFmt.formatVBusItem (importPrice)
+        text: EnhFmt.formatVBusItem (exportPrice)
         color: "black"
         anchors.fill: amberBox
         wrapMode: Text.WordWrap
