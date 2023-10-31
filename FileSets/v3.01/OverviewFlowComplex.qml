@@ -383,7 +383,7 @@ OverviewPage {
 	            visible: true
 			}
 			TileText {
-				y: 20
+				y: 80
 				text: gridStrategy
 				font.pixelSize: 8
 	            visible: true
