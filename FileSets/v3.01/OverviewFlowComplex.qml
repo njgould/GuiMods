@@ -119,23 +119,10 @@ OverviewPage {
     property bool showBatteryTemp: showBatteryTempItem.valid && showBatteryTempItem.value == 1
 
 
-	// property string victronAmberPrefix: "com.victronenergy.amber"
-    // VBusItem { id: importPrice; bind: Utils.path(VictronAmberPrefix, "/ImportPrice") }
-    // VBusItem { id: exportPrice; bind: Utils.path(VictronAmberPrefix, "/ExportPrice") }
-    // VBusItem { id: gridStrategy; bind: Utils.path(VictronAmberPrefix, "/Strategy") }
-
-	// property VBusItem importPrice: VBusItem { bind: "com.victronenergy.amber/ImportPrice" }
-	// property double importPriceDisplay: importPrice
-
 	property VBusItem gridStrategyItem: VBusItem { bind: "com.victronenergy.amber/Strategy" }
-	property string gridStrategy: gridStrategyItem.value
-
 	property VBusItem importPriceItem: VBusItem { bind: "com.victronenergy.amber/ImportPrice" }
-	property string importPrice: importPriceItem.value
-
-
 	property VBusItem exportPriceItem: VBusItem { bind: "com.victronenergy.amber/ExportPrice" }
-	property string exportPrice: exportPriceItem.value
+
 
     function getTimeFormat ()
     {
@@ -381,7 +368,8 @@ OverviewPage {
 			}
 			TileText {
 				y:50
-				text: qsTr ("Export ") + EnhFmt.formatVBusItem (exportPriceItem, "c/kWh")
+				// text: qsTr ("Export ") + EnhFmt.formatVBusItem (exportPriceItem, "c/kWh")
+				text: qsTr ("Export ") + - Utils.sign(exportPriceItem)
 				font.pixelSize: 14
 	            visible: true
 			}
