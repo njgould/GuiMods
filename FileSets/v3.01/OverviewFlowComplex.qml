@@ -371,20 +371,20 @@ OverviewPage {
         opacity: 1
 		values:
 			TileText{
-				y: 20
+				y: 14
 				text: importPrice
 				font.pixelSize: 17
 	            visible: true
 			}
 			TileText {
-				y: 10
+				y: 22
 				text: importPrice
 				font.pixelSize: 17
 	            visible: true
 			}
 			TileText {
-				y: 0
-				text: EnhFmt.formatVBusItem (sys.pvOnGrid.power)
+				y: 30
+				text: gridStrategy
 				font.pixelSize: 17
 	            visible: true
 			}				
