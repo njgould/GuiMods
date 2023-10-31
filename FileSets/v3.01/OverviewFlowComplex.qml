@@ -124,11 +124,14 @@ OverviewPage {
     // VBusItem { id: exportPrice; bind: Utils.path(VictronAmberPrefix, "/ExportPrice") }
     // VBusItem { id: gridStrategy; bind: Utils.path(VictronAmberPrefix, "/Strategy") }
 
-	property VBusItem importPrice: VBusItem { bind: "com.victronenergy.amber/ImportPrice" }
+	// property VBusItem importPrice: VBusItem { bind: "com.victronenergy.amber/ImportPrice" }
 	// property double importPriceDisplay: importPrice
 
 	property VBusItem gridStrategyItem: VBusItem { bind: "com.victronenergy.amber/Strategy" }
 	property string gridStrategy: gridStrategyItem.value
+
+	property VBusItem importPriceItem: VBusItem { bind: "com.victronenergy.amber/ImportPrice" }
+	property string importPrice: importPriceItem.value
 
 
     function getTimeFormat ()
@@ -362,7 +365,7 @@ OverviewPage {
 		titleColor: !darkMode ? "#F4B350" : "#7A5928"
 		color: !darkMode ? "#F39C12" : "#794E09"
 		title: qsTr("Amber Price")
-		width: 100
+		width: 145
 		height: 100
 		visible: true
         opacity: 1
@@ -374,7 +377,7 @@ OverviewPage {
 		}
 		anchors {
 			top: acOutputBox.bottom
-			topMargin: 150
+			topMargin: 120
 			left: acOutputBox.left
 		}
 	}
@@ -1520,7 +1523,7 @@ OverviewPage {
     }
     TileText
     {
-        text: gridStrategy
+        text: importPrice
         color: "black"
         anchors.fill: amberBox
         wrapMode: Text.WordWrap
