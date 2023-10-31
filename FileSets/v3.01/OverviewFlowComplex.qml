@@ -120,9 +120,12 @@ OverviewPage {
 
 
 	property string victronAmberPrefix: "com.victronenergy.amber"
-    VBusItem { id: importPrice; bind: Utils.path(VictronAmberPrefix, "/ImportPrice") }
-    VBusItem { id: exportPrice; bind: Utils.path(VictronAmberPrefix, "/ExportPrice") }
-    VBusItem { id: gridStrategy; bind: Utils.path(VictronAmberPrefix, "/Strategy") }
+    // VBusItem { id: importPrice; bind: Utils.path(VictronAmberPrefix, "/ImportPrice") }
+    // VBusItem { id: exportPrice; bind: Utils.path(VictronAmberPrefix, "/ExportPrice") }
+    // VBusItem { id: gridStrategy; bind: Utils.path(VictronAmberPrefix, "/Strategy") }
+
+	property VBusItem importPrice: VBusItem { bind: "com.victronenergy.amber/ImportPrice" }
+	property double importPriceDisplay: -noNoise (importPriceDisplay) 
 
     function getTimeFormat ()
     {
@@ -1509,12 +1512,13 @@ OverviewPage {
 			top: acOutputBox.bottom
 			topMargin: 20
 			left: acOutputBox.left
+			leftMargin: 4
         }
         visible: true
     }
     TileText
     {
-        text: -Utils.sign (batteryFlow)
+        text: -Utils.sign (importPriceDisplay)
         color: "black"
         anchors.fill: amberBox
         wrapMode: Text.WordWrap
