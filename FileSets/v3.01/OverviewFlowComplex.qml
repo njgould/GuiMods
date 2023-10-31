@@ -1502,19 +1502,19 @@ OverviewPage {
         id: amberBox
         color: "white"
         width: multi.width
-        height: 32
+        height: 80
         opacity: 0.7
         anchors
         {
 			top: acOutputBox.bottom
-			topMargin: 5
+			topMargin: 20
 			left: acOutputBox.left
         }
         visible: true
     }
     TileText
     {
-        text: qsTr ( "Import:" )
+        text: qsTr ( gridStrategy )
         color: "black"
         anchors.fill: amberBox
         wrapMode: Text.WordWrap
