@@ -305,7 +305,7 @@ OverviewPage {
 
 	OverviewBox {
 		id: acOutputBox
-		title: combineAcLoads ? qsTr ("AC Loads") : qsTr ("AC Out Loads")
+		title: combineAcLoads ? qsTr ("AC Loads") : qsTr ("AC Out Loads 12")
 ////// GuiMods — DarkMode
 		color: !darkMode ? "#27AE60" : "#135730"
 		titleColor: !darkMode ? "#2ECC71" : "#176638"
