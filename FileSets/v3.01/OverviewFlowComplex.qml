@@ -119,6 +119,11 @@ OverviewPage {
     property bool showBatteryTemp: showBatteryTempItem.valid && showBatteryTempItem.value == 1
 
 
+	property string victronAmberPrefix: "com.victronenergy.amber"
+    VBusItem { id: importPrice; bind: Utils.path(VictronAmberPrefix, "/ImportPrice") }
+    VBusItem { id: exportPrice; bind: Utils.path(VictronAmberPrefix, "/ExportPrice") }
+    VBusItem { id: gridStrategy; bind: Utils.path(VictronAmberPrefix, "/Strategy") }
+
     function getTimeFormat ()
     {
         if (!timeFormatItem.valid || timeFormatItem.value === 0)
@@ -305,7 +310,7 @@ OverviewPage {
 
 	OverviewBox {
 		id: acOutputBox
-		title: combineAcLoads ? qsTr ("AC Loads") : qsTr ("AC Out Loads 12")
+		title: combineAcLoads ? qsTr ("AC Loads") : qsTr ("AC Out Loads")
 ////// GuiMods — DarkMode
 		color: !darkMode ? "#27AE60" : "#135730"
 		titleColor: !darkMode ? "#2ECC71" : "#176638"
@@ -904,7 +909,7 @@ OverviewPage {
 		ballCount: 1
 		path: corner
 		active: root.active && showAcInput
-		value: Utils.sign (acInputFlow)
+		value: Utils.sign (acInputFlow) + "hi"
 		startPointVisible: true
 		endPointVisible: false
 
