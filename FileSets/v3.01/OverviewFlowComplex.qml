@@ -379,16 +379,16 @@ OverviewPage {
 	            visible: true
 			}
 			TileText {
-				text: EnhFmt.formatVBusItem (exportPriceItem)
+				text: EnhFmt.formatVBusItem (exportPriceItem, "c/kWh")
 				font.pixelSize: 17
 	            visible: true
 			}
-            // spacer
-            TileText
-            {
-                text: ""
-                height: 9
-            }			
+            // // spacer
+            // TileText
+            // {
+            //     text: ""
+            //     height: 9
+            // }			
 			TileText {
 				text: gridStrategy
 				font.pixelSize: 9
