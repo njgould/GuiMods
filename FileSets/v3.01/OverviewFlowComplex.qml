@@ -380,7 +380,7 @@ OverviewPage {
 	            visible: true
 			}
 			TileText {
-				y: 25
+				y: 15
 				text: EnhFmt.formatVBusItem (exportPriceItem)
 				font.pixelSize: 17
 	            visible: true
