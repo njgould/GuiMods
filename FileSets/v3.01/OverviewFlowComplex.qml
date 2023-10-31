@@ -1501,7 +1501,7 @@ OverviewPage {
     {
         id: amberBox
         color: "white"
-        width: 100
+        width: 140
         height: 80
         opacity: 0.7
         anchors
@@ -1514,7 +1514,7 @@ OverviewPage {
     }
     TileText
     {
-        text: EnhFmt.formatVBusItem (exportPrice)
+        text: -Utils.sign (batteryFlow)
         color: "black"
         anchors.fill: amberBox
         wrapMode: Text.WordWrap
