@@ -369,7 +369,7 @@ OverviewPage {
 			TileText {
 				y:50
 				// text: qsTr ("Export ") + EnhFmt.formatVBusItem (exportPriceItem, "c/kWh")
-				text: qsTr ("Export ") + - Utils.sign(exportPriceItem)
+				text: qsTr ("Export ") + - Utils.sign(exportPriceItem.value)
 				font.pixelSize: 14
 	            visible: true
 			}
