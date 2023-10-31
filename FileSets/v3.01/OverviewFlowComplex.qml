@@ -127,6 +127,10 @@ OverviewPage {
 	property VBusItem importPrice: VBusItem { bind: "com.victronenergy.amber/ImportPrice" }
 	// property double importPriceDisplay: importPrice
 
+	property VBusItem gridStrategyItem: VBusItem { bind: "com.victronenergy.amber/Strategy" }
+	property string gridStrategy: gridStrategyItem.value
+
+
     function getTimeFormat ()
     {
         if (!timeFormatItem.valid || timeFormatItem.value === 0)
@@ -1518,7 +1522,7 @@ OverviewPage {
     }
     TileText
     {
-        text: -Utils.sign (importPrice)
+        text: gridStrategy
         color: "black"
         anchors.fill: amberBox
         wrapMode: Text.WordWrap
