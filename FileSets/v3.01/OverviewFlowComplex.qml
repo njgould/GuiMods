@@ -374,19 +374,22 @@ OverviewPage {
         opacity: 1
 		values:
 			TileText{
-				y: 4
-				text: importPrice
+				text: EnhFmt.formatVBusItem (importPriceItem, "c/kWh")
 				font.pixelSize: 17
 	            visible: true
 			}
 			TileText {
-				y: 15
 				text: EnhFmt.formatVBusItem (exportPriceItem)
 				font.pixelSize: 17
 	            visible: true
 			}
+            // spacer
+            TileText
+            {
+                text: ""
+                height: 9
+            }			
 			TileText {
-				y: 80
 				text: gridStrategy
 				font.pixelSize: 9
 	            visible: true
