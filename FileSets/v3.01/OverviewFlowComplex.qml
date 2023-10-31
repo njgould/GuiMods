@@ -379,13 +379,13 @@ OverviewPage {
 			TileText {
 				y: 22
 				text: importPrice
-				font.pixelSize: 17
+				font.pixelSize: 10
 	            visible: true
 			}
 			TileText {
 				y: 30
 				text: gridStrategy
-				font.pixelSize: 17
+				font.pixelSize: 10
 	            visible: true
 			}				
 		anchors {
