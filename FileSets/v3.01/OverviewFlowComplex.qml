@@ -376,13 +376,13 @@ OverviewPage {
 			TileText{
 				y:8
 				text:  qsTr ("Import:") + EnhFmt.formatVBusItem (importPriceItem, "c/kWh")
-				font.pixelSize: 15
+				font.pixelSize: 14
 	            visible: true
 			}
 			TileText {
-				y:14
+				y:4
 				text: qsTr ("Export:") + EnhFmt.formatVBusItem (exportPriceItem, "c/kWh")
-				font.pixelSize: 15
+				font.pixelSize: 14
 	            visible: true
 			}
             // // spacer
@@ -392,6 +392,7 @@ OverviewPage {
             //     height: 9
             // }			
 			TileText {
+				y:80
 				text: gridStrategy
 				font.pixelSize: 9
 	            visible: true
