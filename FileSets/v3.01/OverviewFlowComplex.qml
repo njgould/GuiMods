@@ -125,7 +125,7 @@ OverviewPage {
     // VBusItem { id: gridStrategy; bind: Utils.path(VictronAmberPrefix, "/Strategy") }
 
 	property VBusItem importPrice: VBusItem { bind: "com.victronenergy.amber/ImportPrice" }
-	property double importPriceDisplay: -noNoise (importPrice) 
+	// property double importPriceDisplay: importPrice
 
     function getTimeFormat ()
     {
@@ -1518,7 +1518,7 @@ OverviewPage {
     }
     TileText
     {
-        text: -Utils.sign (importPriceDisplay)
+        text: -Utils.sign (importPrice.value)
         color: "black"
         anchors.fill: amberBox
         wrapMode: Text.WordWrap
