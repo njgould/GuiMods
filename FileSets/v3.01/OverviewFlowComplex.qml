@@ -1514,7 +1514,7 @@ OverviewPage {
     }
     TileText
     {
-        text: qsTr ( gridStrategy )
+        text: EnhFmt.formatVBusItem (sys.battery.power)
         color: "black"
         anchors.fill: amberBox
         wrapMode: Text.WordWrap
