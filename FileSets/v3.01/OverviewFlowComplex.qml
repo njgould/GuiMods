@@ -125,7 +125,7 @@ OverviewPage {
     // VBusItem { id: gridStrategy; bind: Utils.path(VictronAmberPrefix, "/Strategy") }
 
 	property VBusItem importPrice: VBusItem { bind: "com.victronenergy.amber/ImportPrice" }
-	property double importPriceDisplay: -noNoise (importPriceDisplay) 
+	property double importPriceDisplay: -noNoise (importPrice) 
 
     function getTimeFormat ()
     {
