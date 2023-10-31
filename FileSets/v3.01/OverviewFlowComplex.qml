@@ -134,6 +134,9 @@ OverviewPage {
 	property string importPrice: importPriceItem.value
 
 
+	property VBusItem exportPriceItem: VBusItem { bind: "com.victronenergy.amber/ExportPrice" }
+	property string exportPrice: exportPriceItem.value
+
     function getTimeFormat ()
     {
         if (!timeFormatItem.valid || timeFormatItem.value === 0)
@@ -377,15 +380,15 @@ OverviewPage {
 	            visible: true
 			}
 			TileText {
-				y: 22
-				text: importPrice
-				font.pixelSize: 10
+				y: 25
+				text: EnhFmt.formatVBusItem (exportPriceItem)
+				font.pixelSize: 17
 	            visible: true
 			}
 			TileText {
 				y: 80
 				text: gridStrategy
-				font.pixelSize: 8
+				font.pixelSize: 9
 	            visible: true
 			}				
 		anchors {
