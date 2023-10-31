@@ -370,25 +370,30 @@ OverviewPage {
 		visible: true
         opacity: 1
 		values:
-		TileText {
-			y: 11
-			text: EnhFmt.formatVBusItem (sys.pvOnGrid.power)
-			font.pixelSize: 17
-            visible: true
-		}
-		TileText {
-			y: 20
-			text: importPrice
-			font.pixelSize: 17
-            visible: true
-		}
+			TileText{
+				y: 20
+				text: importPrice
+				font.pixelSize: 17
+	            visible: true
+			}
+			TileText {
+				y: 10
+				text: importPrice
+				font.pixelSize: 17
+	            visible: true
+			}
+			TileText {
+				y: 0
+				text: EnhFmt.formatVBusItem (sys.pvOnGrid.power)
+				font.pixelSize: 17
+	            visible: true
+			}				
 		anchors {
 			top: acOutputBox.bottom
-			topMargin: 120
+			topMargin: 20
 			left: acOutputBox.left
 		}
 	}
-
 
 
 
@@ -1509,33 +1514,6 @@ OverviewPage {
         wrapMode: Text.WordWrap
         font.pixelSize: 12
         visible: helpBox.visible
-    }
-
-    // Amber Pricing
-    Rectangle
-    {
-        id: amberBox
-        color: "white"
-        width: 140
-        height: 80
-        opacity: 0.7
-        anchors
-        {
-			top: acOutputBox.bottom
-			topMargin: 20
-			left: acOutputBox.left
-			leftMargin: 4
-        }
-        visible: true
-    }
-    TileText
-    {
-        text: importPrice
-        color: "black"
-        anchors.fill: amberBox
-        wrapMode: Text.WordWrap
-        font.pixelSize: 12
-        visible: true
     }
 
 
