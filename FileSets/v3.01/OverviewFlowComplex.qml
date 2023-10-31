@@ -345,6 +345,13 @@ OverviewPage {
         }
 		DetailTarget { id: acLoadsOnOutputTarget; detailsPage: "DetailLoadsOnOutput.qml" }
 	}
+
+
+
+
+
+
+	
     Timer {
         id: wallClock
         running: timeFormat != ""
@@ -909,7 +916,7 @@ OverviewPage {
 		ballCount: 1
 		path: corner
 		active: root.active && showAcInput
-		value: Utils.sign (acInputFlow) + "hi"
+		value: Utils.sign (acInputFlow)
 		startPointVisible: true
 		endPointVisible: false
 
@@ -1461,6 +1468,32 @@ OverviewPage {
         font.pixelSize: 12
         visible: helpBox.visible
     }
+
+    // Amber Pricing
+    Rectangle
+    {
+        id: amberBox
+        color: "white"
+        width: multi.width
+        height: 32
+        opacity: 0.7
+        anchors
+        {
+			verticalCenter: dcLaneTop.verticalCenter
+            horizontalCenter: root.horizontalCenter
+        }
+        visible: false
+    }
+    TileText
+    {
+        text: qsTr ( "Import:" )
+        color: "black"
+        anchors.fill: amberBox
+        wrapMode: Text.WordWrap
+        font.pixelSize: 12
+        visible: true
+    }
+
 
 	//// hard key handler
 	//		used to press buttons when touch isn't available
